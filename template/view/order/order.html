@@ -1,0 +1,193 @@
+<!-- top -->
+<nav class="top">
+    <div class="menu"><a href="javascript:history.go(-1);"><img src="temp/images/back.svg"></a></div>
+    <div class="logo">{{$state.current.data.pageTitle}}</div>
+    <div class="my-person"><a ui-sref="content.personal-center"><img src="temp/images/sidebar.svg"></a></div>
+</nav>
+<!-- searchBar -->
+<div class="search-order">
+    <div class="weui-search-bar" id="searchBar">
+        <form class="weui-search-bar__form">
+            <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="" ng-model="serach_content">
+                <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+            </div>
+            <label class="weui-search-bar__label" id="searchText">
+                <i class="weui-icon-search"></i>
+                <span>搜索</span>
+            </label>
+        </form>
+        <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+    </div>
+</div>
+<!-- tabbar -->
+<div class="weui-tab" id="order-padding">
+    <div class="weui-navbar weui-navbar-bg" ng-init='activeTab=1'>
+        <a class="weui-navbar__item" href="javascript:;" ng-class='{active:activeTab==1}' ng-click="all(activeTab=1);">
+      全部
+    </a>
+        <a class="weui-navbar__item" href="javascript:;" ng-class='{active:activeTab==2}' ng-click='all(activeTab=2)'>
+      待支付
+    </a>
+        <a class="weui-navbar__item" href="javascript:;" ng-class='{active:activeTab==3}' ng-click='all(activeTab=3)'>
+      待评价
+    </a>
+        <a class="weui-navbar__item" href="javascript:;" ng-class='{active:activeTab==4}' ng-click='all(activeTab=4)'>
+      已完成
+    </a>
+    </div>
+    <div class="weui-tab__bd">
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active" ng-show='activeTab==1'>
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__bd">
+                    <a href="" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="temp/images/show-img.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <p class="weui-media-box__desc">订单号：<i>454545455</i></p>
+                            <h4 class="weui-media-box__title order-price"><span>旅游线路订单名称</span><span>￥<i>452</i></span></h4>
+                            <div class="weui-media-box__desc order-time"><i>2018-1-6</i><span class="wait-pay">待支付</span></div>
+                        </div>
+                    </a>
+                    <a href="" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="temp/images/show-img.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <p class="weui-media-box__desc">订单号：<i>454545455</i></p>
+                            <h4 class="weui-media-box__title order-price"><span>旅游线路订单名称</span><span>￥<i>452</i></span></h4>
+                            <div class="weui-media-box__desc order-time"><i>2018-1-6</i><span class="already-pay">已支付</span></div>
+                        </div>
+                        <div class="pay-sign"><img src="temp/images/home.png" alt=""></div>
+                    </a>
+                    <a href="" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="temp/images/show-img.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <p class="weui-media-box__desc">订单号：<i>454545455</i></p>
+                            <h4 class="weui-media-box__title order-price"><span>旅游线路订单名称</span><span>￥<i>452</i></span></h4>
+                            <div class="weui-media-box__desc order-time"><i>2018-1-6</i>
+                                <div><i class="evaluate">评价</i><span class="already-pay">已支付</span></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="temp/images/show-img.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <p class="weui-media-box__desc">订单号：<i>454545455</i></p>
+                            <h4 class="weui-media-box__title order-price"><span>旅游线路订单名称</span><span>￥<i>452</i></span></h4>
+                            <div class="weui-media-box__desc order-time"><i>2018-1-6</i><span class="already-cancle">已取消</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="tab2" class="weui-tab__bd-item" ng-show='activeTab==2' ng-repeat="(key, value) in datalist">
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__bd">
+                    <a href="" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="temp/images/show-img.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <p class="weui-media-box__desc">订单号：<i>454545455</i></p>
+                            <h4 class="weui-media-box__title order-price"><span>{{value[0]}}</span><span>￥<i>{{value[1]}}</i></span></h4>
+                            <div class="weui-media-box__desc order-time"><i>2018-1-6</i><span class="wait-pay">待支付</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="tab3" class="weui-tab__bd-item" ng-show='activeTab==3' ng-repeat="(key, value) in datalist">
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__bd">
+                    <a href="" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="temp/images/show-img.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <p class="weui-media-box__desc">订单号：<i>45456456</i></p>
+                            <h4 class="weui-media-box__title order-price"><span>{{value[0]}}</span><span>￥<i>{{value[1]}}</i></span></h4>
+                            <div class="weui-media-box__desc order-time"><i>2018-1-6</i>
+                                <div><i class="evaluate">评价</i><span class="already-pay">已支付</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="tab4" class="weui-tab__bd-item" ng-show='activeTab==4' ng-repeat="(key, value) in datalist">
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__bd">
+                    <a href="" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="temp/images/show-img.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <p class="weui-media-box__desc">订单号：<i>454545455</i></p>
+                            <h4 class="weui-media-box__title order-price"><span>{{value[0]}}</span><span>￥<i>{{value[1]}}</i></span></h4>
+                            <div class="weui-media-box__desc order-time"><i>2018-1-6</i>
+                                <div><i class="evaluate">评价</i><span class="already-pay">已支付</span></div>
+                            </div>
+                        </div>
+                        <div class="pay-sign"><img src="" alt=""></div>
+                    </a>
+                    <a href="" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="temp/images/show-img.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <p class="weui-media-box__desc">订单号：<i>454545455</i></p>
+                            <h4 class="weui-media-box__title order-price"><span>旅游线路订单名称</span><span>￥<i>452</i></span></h4>
+                            <div class="weui-media-box__desc order-time"><i>2018-1-6</i><span class="already-pay">已支付</span></div>
+                        </div>
+                        <div class="pay-sign"><img src="temp/images/home.png" alt=""></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="evaluate" style="display: none">
+    <div class="layui-form-item layui-form-text">
+        <textarea placeholder="请输入内容" class="layui-textarea" id="textarea"></textarea>
+    </div>
+</div>
+<script>
+$(document).on('click', '.evaluate', function(event) {
+    layer.open({
+        title: false,
+        anim: 'up',
+        content: $("#evaluate").html(),
+        btn: ['确认', '取消'],
+        yes: function(index) {
+            var val = $("#textarea").val();
+            // if (val != '') {
+            //     $.ajax({
+            //             url: 'data/data.json',
+            //             type: 'post',
+            //             dataType: 'json',
+            //             data: { val: 'val' },
+            //         })
+            //         success:function(data,$scope) {
+            //             if (data.) {
+            //                 layer.msg('提交成功', { icon: 1 });
+                            
+            //                 console.log("success");
+            //             }
+            //             $scope.$appy();
+            //         }
+            // } else {
+            //     layer.alert('请输入', { icon: 2 });
+            // }
+            layer.close(index);
+        }
+    });
+
+});
+</script>

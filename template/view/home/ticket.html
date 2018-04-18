@@ -1,0 +1,63 @@
+<!-- top -->
+<nav class="top">
+    <div class="menu"><a href="javascript:history.go(-1);"><img src="temp/images/back.svg"></a></div>
+    <div class="logo">{{$state.current.data.pageTitle}}</div>
+    <div class="my-person"><a ui-sref="content.personal-center"><img src="temp/images/person.svg"></a></div>
+</nav>
+<!-- searchBar -->
+<div class="search-order">
+    <div class="weui-search-bar" id="searchBar">
+        <form class="weui-search-bar__form">
+            <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="" ng-model="serach_content">
+                <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+            </div>
+            <label class="weui-search-bar__label" id="searchText">
+                <i class="weui-icon-search"></i>
+                <span>搜索</span>
+            </label>
+        </form>
+        <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+    </div>
+</div>
+<!-- 景区门票 -->
+<div id="ticket">
+    <div class="view-ticket">
+        <a ui-sref="ticket-details">
+            <div class="view-img">
+                <img src="temp/images/show-img.png">
+                <div class="star"></div>
+            </div>
+            <div class="view-txt">
+                <div class="view-txt-left">
+                    <div class="view-txt-title">元佑国际温泉2门票</div>
+                    <div class="place">湖北省钟祥市客店镇</div>
+                </div>
+                <div class="ticket-price">￥<span>98.00</span></div>
+            </div>
+        </a>
+    </div>
+    <div class="view-ticket">
+        <a href="">
+            <div class="view-img">
+                <img src="temp/images/show-img.png">
+                <div class="star"></div>
+            </div>
+            <div class="view-txt">
+                <div class="view-txt-left">
+                    <div class="view-txt-title">元佑国际温泉2门票</div>
+                    <div class="place">湖北省钟祥市客店镇</div>
+                </div>
+                <div class="ticket-price">￥<span>98.00</span></div>
+            </div>
+        </a>
+    </div>
+</div>
+<script type="text/javascript">
+    $('.star').raty({
+        readOnly : true,
+        path:'UI/raty/lib/img',
+        score: 3.26
+    });
+</script>

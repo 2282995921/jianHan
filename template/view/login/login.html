@@ -1,0 +1,70 @@
+<div id="login-bg">
+    <!-- top -->
+    <nav class="top">
+        <div class="menu"><a href="javascript:history.go(-1);"><img src="temp/images/back.svg"></a></div>
+        <div class="logo">{{$state.current.data.pageTitle}}</div>
+        <div class="my-person"><a href=""><img src="temp/images/sidebar.svg"></a></div>
+    </nav>
+    <!-- 登入 -->
+    <form class="layui-form" action="">
+        <div class="weui-cells_form">
+            <div class="input-row">
+                <div class="weui-cell__hd">
+                    <label class=""></label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入账号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="weui-cell__hd">
+                    <label class=""></label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="weui-cell__bd">
+                    <input type="button" class="layui-input input-bg" lay-submit lay-filter="formDemo" value="登录">
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="input-select">
+        <div class="back-pw">
+            <a class="weui-cell weui-cell_access" href="">
+                <div class="weui-cell__bd">
+                    <p>找回密码</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </a>
+        </div>
+        <div class="back-pw">
+            <a class="weui-cell weui-cell_access" ui-sref="register">
+                <div class="weui-cell__bd">
+                    <p>用户注册</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="login-or">or</div>
+    <div class="login-way">
+        <img src="">
+        <img src="">
+    </div>
+    <div class="agreement">登入即视为您已同意<a href="">用户协议</a></div>
+</div>
+<script type="text/javascript">
+layui.use('form', function() {
+    var form = layui.form;
+    //监听提交
+    form.on('submit(formDemo)', function(data) {
+        layer.msg(JSON.stringify(data.field));
+        return false;
+    });
+});
+</script>

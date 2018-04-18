@@ -1,0 +1,145 @@
+<!-- top -->
+<nav class="top">
+    <div class="menu">
+        <div class="icon_button" ng-click="toggle()"><img src="temp/images/sidebar.svg"></div>
+        <ul class="drop-menu" ng-hide="myVar">
+            <li class="arrow"></li>
+            <li><a ui-sref="content.home.distributed_center">集散中心介绍</a></li>
+            <li><a ui-sref="content.home.cooperative_partner">合作伙伴</a></li>
+            <li><a href="">场地介绍</a></li>
+            <li><a href="">旅游介绍</a></li>
+            <li><a href="">关于我们</a></li>
+        </ul>
+    </div>
+    <div class="logo"><a href=""><img src="temp/images/jh-logo.png" alt=""></a></div>
+    <div class="my-person"><a ui-sref="content.personal-center"><img src="temp/images/person.svg" alt=""></a></div>
+</nav>
+<!-- searchBar -->
+<div class="search">
+    <div class="weui-search-bar" id="searchBar">
+        <form class="weui-search-bar__form">
+            <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+            </div>
+            <label class="weui-search-bar__label" id="searchText">
+                <i class="weui-icon-search"></i>
+                <span>搜索</span>
+            </label>
+        </form>
+        <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+    </div>
+</div>
+<!-- 九宫格 -->
+<div class="weui-grids" id="grid">
+    <a ui-sref="content.home.ticket" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="temp/images/jh-ticket.png" alt="">
+        </div>
+        <p class="weui-grid__label">
+            景区门票
+        </p>
+    </a>
+    <a href="" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="temp/images/jh-tour.png" alt="">
+        </div>
+        <p class="weui-grid__label">
+            水陆联游
+        </p>
+    </a>
+    <a href="" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="temp/images/jh-periphery.png" alt="">
+        </div>
+        <p class="weui-grid__label">
+            周边游
+        </p>
+    </a>
+    <a href="" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="temp/images/jh-domestic_tour.png" alt="">
+        </div>
+        <p class="weui-grid__label">
+            国内游
+        </p>
+    </a>
+    <a href="" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="temp/images/jh-hot_active.png" alt="">
+        </div>
+        <p class="weui-grid__label">
+            热销活动
+        </p>
+    </a>
+    <a href="" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="temp/images/jh-field_book.png" alt="">
+        </div>
+        <p class="weui-grid__label">
+            会场预订
+        </p>
+    </a>
+</div>
+<!-- panel -->
+<div class="weui-panel weui-panel_access" id="panel">
+    <div class="weui-panel__bd">
+        <a href="" class="weui-media-box weui-media-box_appmsg">
+            <div class="weui-media-box__hd">
+                <img class="weui-media-box__thumb" src="temp/images/jh-headlines.png">
+            </div>
+            <div class="weui-media-box__bd">
+                <p class="weui-media-box__desc">奔跑吧大武汉！坐标城市户外挑战赛！</p>
+                <p class="weui-media-box__desc">集散中心成功举办“万名知青回茶乡”活动</p>
+            </div>
+        </a>
+    </div>
+</div>
+<!-- 热门推荐 -->
+<div id="top-recommend">
+    <div class="weui-cells">
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+            <div class="weui-cell__bd">
+                <p>热门推荐</p>
+            </div>
+            <div class="weui-cell__ft">
+            </div>
+        </a>
+    </div>
+    <div class="list-img">
+        <ul>
+            <li>
+                <a href=""><img src="temp/images/show-img.png" alt="">
+                <p>元佑国际温泉2门票</p></a>
+            </li>
+            <li>
+                <a href=""><img src="temp/images/show-img.png" alt="">
+                <p>元佑国际温泉2门票</p></a>
+            </li>
+            <li>
+                <a href=""><img src="temp/images/show-img.png" alt="">
+                <p>元佑国际温泉2门票</p></a>
+            </li>
+            <li>
+                <a href=""><img src="temp/images/show-img.png" alt="">
+                <p>元佑国际温泉2门票</p></a>
+            </li>
+            <li>
+                <a href=""><img src="temp/images/show-img.png" alt="">
+                <p>元佑国际温泉2门票</p></a>
+            </li>
+            <li>
+                <a href=""><img src="temp/images/show-img.png" alt="">
+                <p>元佑国际温泉2门票</p></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 底部 -->
+<div class="weui-footer weui-cells" id="weui-footer">
+    <p class="weui-footer__text">24小时服务热线：027-8888888</p>
+    <p class="weui-footer__text">座机：027-85721300</p>
+    <p class="weui-footer__text">地址：武汉市武昌区中北路1号楚天都市花园D座31楼E室</p>
+    <p class="weui-footer__text">版权所有：武汉江汉朝宗旅游集散中心</p>
+</div>

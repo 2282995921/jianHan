@@ -1,0 +1,4 @@
+angular.module("ngRouteExample").run(["$templateCache", function($templateCache) {
+    $templateCache.put("temp/view/home/home.html", "<div class=\"wrapper {{ctrl.page1Style}}\"\n	ng-style=\"{\n		\'-webkit-transition-duration\': ctrl.speed + \'ms\',\n		\'-moz-transition-duration\': ctrl.speed + \'ms\',\n		\'-ms-transition-duration\': ctrl.speed + \'ms\',\n		\'-o-transition-duration\': ctrl.speed + \'ms\',\n		\'transition-duration\': ctrl.speed + \'ms\'\n	}\">\n\n	<h1>Page 1</h1>\n\n</div>");
+    $templateCache.put("temp/view/order/order.html", "<div class=\"wrapper {{ctrl.page2Style}}\"\n	ng-style=\"{\n		\'-webkit-transition-duration\': ctrl.speed + \'ms\',\n		\'-moz-transition-duration\': ctrl.speed + \'ms\',\n		\'-ms-transition-duration\': ctrl.speed + \'ms\',\n		\'-o-transition-duration\': ctrl.speed + \'ms\',\n		\'transition-duration\': ctrl.speed + \'ms\'\n	}\">\n\n	<h1>Page 2</h1>\n\n</div>");
+}]);
